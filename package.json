@@ -1,13 +1,13 @@
 {
-  "name": "@gitbook/slate-edit-list",
+  "name": "slate-edit-list",
   "description": "A Slate plugin to handle keyboard events in lists.",
   "version": "0.12.2",
   "license": "Apache-2.0",
-  "repository": "git://github.com/GitbookIO/slate-edit-list.git",
+  "repository": "git://github.com/ac-amygdala/slate-edit-list.git",
   "main": "./dist/index.js",
   "peerDependencies": {
     "immutable": "^3.8.2",
-    "@gitbook/slate": "^0.34.7"
+    "slate": "^0.41.1"
   },
   "files": [
     "dist",
@@ -44,10 +44,10 @@
     "prettier": "^1.13.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "@gitbook/slate": "^0.34.7",
-    "slate-hyperprint": "^2.2.4",
-    "@gitbook/slate-hyperscript": "^0.5.22",
-    "@gitbook/slate-react": "^0.13.4",
+    "slate": "^0.41.1",
+    "slate-hyperprint": "^2.2.6",
+    "slate-hyperscript": "^0.10.6",
+    "slate-react": "^0.18.9",
     "stringify": "^5.1.0"
   },
   "scripts": {
@@ -60,7 +60,7 @@
     "serve-example": "http-server ./example/ -p 8081",
     "start": "npm run build-example && npm run serve-example",
     "deploy-example": "npm run build-example && gh-pages -d ./example",
-    "test": "./node_modules/.bin/mocha ./tests/all.js --compilers js:babel-register --reporter=list"
+    "test": "./node_modules/.bin/mocha ./tests/all.js --compilers js:babel-register --reporter=list --verbose"
   },
   "keywords": [
     "slate"

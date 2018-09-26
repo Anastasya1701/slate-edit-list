@@ -6,12 +6,17 @@ export default function(plugin, change) {
     // check new selection
     const selectedNode = change.value.document.getTexts().get(2);
 
-    expect(change.value.selection.toJS()).toMatch({
-        anchorKey: selectedNode.key,
-        anchorOffset: 0,
-        focusKey: selectedNode.key,
-        focusOffset: 0
-    });
+    expect(change.value.selection.toJS()).toMatch(change.value.document.createSelection({
+      anchor: {
+        key: selectedNode.key,
+        offset: 0,
+      },
+      focus: {
+        key: selectedNode.key,
+        offset: 0,
+      },
+      isFocused: true,
+    }).toJS());
 
     return change;
 }
